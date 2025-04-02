@@ -1,0 +1,91 @@
+atividades em java 
+Pedro Henrique de Oliveira Santos
+RGM: 11241103045 
+
+Desafio 1 Conversão de Temperatura
+import java.util.Scanner;
+
+public class ConversaoTemperatura {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite a temperatura em Celsius: ");
+        double celsius = scanner.nextDouble();
+        double fahrenheit = (celsius * 9 / 5) + 32;
+        double kelvin = celsius + 273.15;
+        System.out.println(fahrenheit + "°F");
+        System.out.println(kelvin + "K");
+        scanner.close();
+    }
+}
+
+Desafio 2 Calculadora de Juros Simples 
+import java.util.Scanner;
+
+public class CalculandoJurosCompostos {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite o capital inicial: ");
+        double capital = scanner.nextDouble();
+        System.out.print("Digite a taxa de juros (% ao mês): ");
+        double taxa = scanner.nextDouble() / 100;
+        System.out.print("Digite o número de meses: ");
+        int meses = scanner.nextInt();
+        double montante = capital * Math.pow(1 + taxa, meses);
+        System.out.println("Montante final: " + montante);
+        scanner.close();
+    }
+}
+
+Desafio 3 Média de Aluno
+import java.util.Scanner;
+
+public class MediaAluno {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite a primeira nota: ");
+        double nota1 = scanner.nextDouble();
+        System.out.print("Digite a segunda nota: ");
+        double nota2 = scanner.nextDouble();
+        System.out.print("Digite a terceira nota: ");
+        double nota3 = scanner.nextDouble();
+        double media = (nota1 + nota2 + nota3) / 3;
+        System.out.println("A média final do aluno é " + String.format("%.1f", media));
+        scanner.close();
+    }
+}
+
+Desafio 4 Calculadora de Juros Simples
+import java.util.Scanner;
+
+public class CalculadoraJurosSimples {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite o capital inicial: ");
+        double capital = scanner.nextDouble();
+        System.out.print("Digite a taxa de juros mensal (%): ");
+        double taxa = scanner.nextDouble() / 100;
+        System.out.print("Digite o tempo (em meses): ");
+        int meses = scanner.nextInt();
+        double juros = capital * taxa * meses;
+        double montante = capital + juros;
+        System.out.println("Juros: " + juros);
+        System.out.println("Montante final: " + montante);
+        scanner.close();
+    }
+}
+
+Desafio 5 Área e Perímetro de um Círculo 
+import java.util.Scanner;
+
+public class AreaPerimetroCirculo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite o raio do círculo: ");
+        double raio = scanner.nextDouble();
+        double area = Math.PI * Math.pow(raio, 2);
+        double perimetro = 2 * Math.PI * raio;
+        System.out.println("Área: " + area);
+        System.out.println("Perímetro: " + perimetro);
+        scanner.close();
+    }
+}
