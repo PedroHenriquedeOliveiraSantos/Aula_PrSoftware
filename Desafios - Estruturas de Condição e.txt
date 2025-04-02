@@ -1,0 +1,161 @@
+Desafios - Estruturas de Condição e Repetição
+Pedro Henrique de Oliveira Santos
+RGM: 11241103045
+
+Desafio 1: Adivinhe o Número
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class Desafio1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Random rand = new Random();
+        
+        int numeroSecreto = rand.nextInt(10) + 1;
+        int palpite = sc.nextInt();
+        
+        if (palpite == numeroSecreto) {
+            System.out.println(1);  // Acertou
+        } else {
+            System.out.println(0);  // Errou
+        }
+        
+        sc.close();
+    }
+}
+
+
+Desafio 2: Conversor de Moedas
+
+import java.util.Scanner;
+
+public class Desafio2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        double valor = sc.nextDouble();
+        int opcao = sc.nextInt();
+        double convertido = 0;
+        
+        switch (opcao) {
+            case 1:
+                convertido = valor * 0.20;
+                break;
+            case 2:
+                convertido = valor * 0.18;
+                break;
+            case 3:
+                convertido = valor * 0.15;
+                break;
+        }
+        
+        System.out.println(convertido);
+        
+        sc.close();
+    }
+}
+
+
+Desafio 3: Cálculo de Taxa de Empréstimo
+
+import java.util.Scanner;
+
+public class Desafio3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        double valor = sc.nextDouble();
+        int parcelas = sc.nextInt();
+        
+        switch (parcelas) {
+            case 6:
+                valor *= 1.05;
+                break;
+            case 12:
+                valor *= 1.10;
+                break;
+            case 24:
+                valor *= 1.20;
+                break;
+        }
+        
+        System.out.println(valor);
+        
+        sc.close();
+    }
+}
+
+
+Desafio 4: Média de Números com DO-WHILE
+
+import java.util.Scanner;
+
+public class Desafio4 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int soma = 0, contador = 0, num;
+        
+        do {
+            num = sc.nextInt();
+            if (num != 0) {
+                soma += num;
+                contador++;
+            }
+        } while (num != 0);
+        
+        double media = contador == 0 ? 0 : (double) soma / contador;
+        System.out.println(media);
+        
+        sc.close();
+    }
+}
+
+
+Desafio 5: Número Par ou Ímpar com WHILE
+
+import java.util.Scanner;
+
+public class Desafio5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int somaPar = 0, somaImpar = 0, num;
+        
+        while ((num = sc.nextInt()) != 0) {
+            if (num % 2 == 0) {
+                somaPar += num;
+            } else {
+                somaImpar += num;
+            }
+        }
+        
+        System.out.println(somaPar);
+        System.out.println(somaImpar);
+        
+        sc.close();
+    }
+}
+
+
+Desafio 6: Fatorial de um Número
+
+import java.util.Scanner;
+
+public class Desafio6 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int num = sc.nextInt();
+        int fatorial = 1;
+        
+        for (int i = 1; i <= num; i++) {
+            fatorial *= i;
+        }
+        
+        System.out.println(fatorial);
+        
+        sc.close();
+    }
+}
